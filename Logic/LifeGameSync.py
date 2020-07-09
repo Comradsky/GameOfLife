@@ -11,6 +11,6 @@ class LifeGameSync(LifeGame):
         self.runTimes = 0
 
 
-def startSyncGame(dimensionSize, chancePercent, maxRunTimes, sleepTime):
+def startSyncGame(dimensionSize, chancePercent, maxRunTimes, sleepTime, verbose):
     gameOfLife = LifeGameSync(dimensionSize, chancePercent, maxRunTimes, sleepTime)
-    gameOfLife.runGame()
+    gameOfLife.runGame(verbose)

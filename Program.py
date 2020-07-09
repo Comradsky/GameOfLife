@@ -5,9 +5,9 @@ from Logic.LifeGameSync import *
 
 def startTheGame(args):
     if args.runAsyncVersion:
-        startAsyncGame(args.dimensionSize, args.chancePercent, args.maxRunTimes, args.sleepTime)
+        startAsyncGame(args.dimensionSize, args.chancePercent, args.maxRunTimes, args.sleepTime, args.verbose)
     else:
-        startSyncGame(args.dimensionSize, args.chancePercent, args.maxRunTimes, args.sleepTime)
+        startSyncGame(args.dimensionSize, args.chancePercent, args.maxRunTimes, args.sleepTime, args.verbose)
 
 
 def main(argv):

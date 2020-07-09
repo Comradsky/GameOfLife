@@ -4,7 +4,7 @@ import asyncio
 
 
 class GridAsync(Grid):
-    async def _getFutureRow(self, y):
+    def _getFutureRow(self, y):
         yRow = self.getFutureGridRow(y)
         return yRow
 
@@ -16,4 +16,7 @@ class GridAsync(Grid):
         return await asyncio.gather(*tasks)
 
     def getFutureGridState(self):
-        self.rows = asyncio.run(self._getFutureRows())
+        try:
+            self.rows = asyncio.run(self._getFutureRows())
+        except KeyboardInterrupt:
+            print("Later Nerd :)")

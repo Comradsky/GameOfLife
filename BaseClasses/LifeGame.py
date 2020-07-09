@@ -11,13 +11,25 @@ class LifeGame:
         self.myGrid.getFutureGridState()
         self.myGrid.printGrid()
 
-    def runGame(self):
+    @staticmethod
+    def _printOriginalGrid(originalGrid):
+        print("You said --verbose: this is your grid seed:")
+        Grid.printThis(originalGrid, originalGrid.width)
+
+    def runGame(self, verbose):
+        originalGrid = self.myGrid.rows
         while (self.maxRunTimes == 0 or self.runTimes < self.maxRunTimes) and \
                 self.myGrid.anyAlive() and self.myGrid.notAllAlive():
             try:
                 self.incrementState()
             except KeyboardInterrupt:
+                if verbose is True:
+                    self._printOriginalGrid(originalGrid)
                 print("Later Nerd :)")
                 break
+        if verbose is True:
+            self._printOriginalGrid(originalGrid)
         print("NumberOfTurnsRan:", self.runTimes)
+        print("Later Nerd :)")
+
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import random
+import os
 
 
 class Grid:
@@ -22,22 +23,22 @@ class Grid:
             grid.append(yRow)
         return grid
 
-    # not used right now, this is useful for testing, also displayCounts looks cool
+    # need a non self based method to print out stored original seed and custom grid objects
     @staticmethod
-    def _printThis(grid, width):
-        print("XX"*width)
+    def printThis(grid, width):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("▃▃"*width)
         for yRow in grid:
             row = ""
             for x in yRow:
                 if x:
-                    row += "0 "
+                    row += "O "
                 else:
                     row += "  "
             print(row)
-        print()
 
     # not used right now, this is useful for testing, also displayCounts looks cool
-    def _displayCounts(self):
+    def displayCounts(self):
         countGrid = []
         for y in range(0, self.width + 1):
             yRow = []
@@ -47,16 +48,16 @@ class Grid:
         self.printThis(countGrid, self.width)
 
     def printGrid(self):
-        print("XX"*self.width)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("▃▃"*self.width)
         for yRow in self.rows:
             row = ""
             for x in yRow:
                 if x:
-                    row += "0 "
+                    row += "O " #░░
                 else:
-                    row += "  "
+                    row += "  " #░░
             print(row)
-        print()
 
     def anyAlive(self):
         for yRow in self.rows:

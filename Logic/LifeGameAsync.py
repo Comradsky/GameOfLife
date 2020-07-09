@@ -11,6 +11,6 @@ class LifeGameAsync(LifeGame):
         self.runTimes = 0
 
 
-def startAsyncGame(dimensionSize, chancePercent, maxRunTimes, sleepTime):
+def startAsyncGame(dimensionSize, chancePercent, maxRunTimes, sleepTime, verbose):
     gameOfLife = LifeGameAsync(dimensionSize, chancePercent, maxRunTimes, sleepTime)
-    gameOfLife.runGame()
+    gameOfLife.runGame(verbose)
