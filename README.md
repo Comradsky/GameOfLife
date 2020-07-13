@@ -16,7 +16,7 @@ This project will not be updated to Use PyGame or another visualization framewor
 # Instructions:
 	1.   Navigate to the projects directory, you should see 'BaseClasses/', 'Logic/', 'Program.py', etc.
 	2.   Run Program.py --help and the instructions should be self explanatory
-               - Don't forget to zoome out after running to see the big grid
+               - Don't forget to zoom out after running to see the big grid
                - Example of what I like to run: 'Program.py 200 3 --sleepTime 0 --verbose'
 
 
