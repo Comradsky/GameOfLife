@@ -22,9 +22,9 @@ This project will not be updated to Use PyGame or another visualization framewor
 
 
 
-#FYI, stuff I'm coming back to do after other projects:
+# FYI, stuff I'm coming back to do after other projects:
 	1.   prevent poor input, do error checking and more handling and try catches, validate input etc.
-        2.   handle ctrl+c on async, signal handler
+	2.   handle ctrl+c on async, signal handler
 	3.   handle --verbose : fix verbose (make it pring out the original seed, make sure it works for async version as well)   
 
 
