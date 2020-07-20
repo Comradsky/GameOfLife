@@ -27,15 +27,16 @@ class Grid:
     @staticmethod
     def printThis(grid, width):
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("▃▃"*width)
+        print("┏" + "━"*2*(width+1) + "┓")
         for yRow in grid:
             row = ""
             for x in yRow:
                 if x:
-                    row += "O "
+                    row += "O "  # ░░
                 else:
-                    row += "  "
-            print(row)
+                    row += "  "  # ░░
+            print("┃" + row + "┃")
+        print("┗" + "━"*2*(width+1) + "┛")
 
     # not used right now, this is useful for testing, also displayCounts looks cool
     def displayCounts(self):
@@ -49,7 +50,7 @@ class Grid:
 
     def printGrid(self):
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("▃▃"*self.width)
+        print("┏" + "━"*2*(self.width+1) + "┓")
         for yRow in self.rows:
             row = ""
             for x in yRow:
@@ -57,7 +58,8 @@ class Grid:
                     row += "O " #░░
                 else:
                     row += "  " #░░
-            print(row)
+            print("┃" + row + "┃")
+        print("┗" + "━"*2*(self.width+1) + "┛")
 
     def anyAlive(self):
         for yRow in self.rows:
